@@ -1,6 +1,8 @@
+"use client";
+
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
-import Lottie from "react-lottie";
+import { Player } from "lottie-react"; // ✅ FIXED
 
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBg";
@@ -51,18 +53,11 @@ export const BentoGridItem = ({
 
   const [copied, setCopied] = useState(false);
 
-  const defaultOptions = {
-    loop: copied,
-    autoplay: copied,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-
   const handleCopy = () => {
-    navigator.clipboard.writeText("souravpaul043@gmail.com");
-    setCopied(true);
+    if (typeof window !== "undefined") {
+      navigator.clipboard.writeText("souravpaul043@gmail.com");
+      setCopied(true);
+    }
   };
 
   return (
@@ -78,29 +73,25 @@ export const BentoGridItem = ({
       }}
     >
       <div className="relative h-full">
-        {/* Main background image */}
-       {img && id !== 5 && (
-  <img
-    src={img}
-    alt={img}
-    className={cn(
-      "absolute inset-0 w-full h-full object-cover object-center",
-      imgClassName
-    )}
-  />
-)}
+        {img && id !== 5 && (
+          <img
+            src={img}
+            alt={img}
+            className={cn(
+              "absolute inset-0 w-full h-full object-cover object-center",
+              imgClassName
+            )}
+          />
+        )}
 
-        {/* Background code image (CLIPPED & FIXED) */}
         {spareImg && id !== 5 && (
-  <img
-    src={spareImg}
-    alt={spareImg}
-    className="absolute right-0 bottom-0 w-full opacity-40"
-  />
-)}
+          <img
+            src={spareImg}
+            alt={spareImg}
+            className="absolute right-0 bottom-0 w-full opacity-40"
+          />
+        )}
 
-
-        {/* Text content */}
         <div
           className={cn(
             titleClassName,
@@ -117,14 +108,12 @@ export const BentoGridItem = ({
             {title}
           </h2>
 
-          {/* Globe */}
           {id === 2 && (
             <div className="absolute inset-x-0 bottom-0 flex justify-center z-0">
               <GridGlobe />
             </div>
           )}
 
-          {/* Tech stack */}
           {id === 3 && (
             <div className="flex gap-4 mt-6">
               <div className="flex flex-col gap-3 lg:gap-6">
@@ -150,12 +139,18 @@ export const BentoGridItem = ({
             </div>
           )}
 
-          {/* Copy email */}
           {id === 6 && (
             <div className="mt-6 relative">
-              <div className="absolute -bottom-5 right-0">
-                <Lottie options={defaultOptions} height={200} width={400} />
-              </div>
+              {copied && (
+                <div className="absolute -bottom-5 right-0">
+                  <Player
+                    autoplay
+                    loop={false}
+                    src={animationData}
+                    style={{ height: 200, width: 400 }}
+                  />
+                </div>
+              )}
 
               <MagicButton
                 title={copied ? "Email is Copied!" : "Copy my email address"}
@@ -168,7 +163,6 @@ export const BentoGridItem = ({
           )}
         </div>
 
-        {/* Gradient animation */}
         {id === 6 && (
           <BackgroundGradientAnimation>
             <div className="absolute inset-0 z-0" />
