@@ -10,10 +10,10 @@ import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
 
-const Player = dynamic(
-  () => import("lottie-react").then((mod) => mod.Player),
-  { ssr: false }
-);
+/* ✅ FIXED: lottie-react default export + SSR disabled */
+const Lottie = dynamic(() => import("lottie-react"), {
+  ssr: false,
+});
 
 export const BentoGrid = ({
   className,
@@ -59,8 +59,10 @@ export const BentoGridItem = ({
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("souravpaul043@gmail.com");
-    setCopied(true);
+    if (typeof window !== "undefined") {
+      navigator.clipboard.writeText("souravpaul043@gmail.com");
+      setCopied(true);
+    }
   };
 
   return (
@@ -76,10 +78,11 @@ export const BentoGridItem = ({
       }}
     >
       <div className="relative h-full">
+        {/* Background image */}
         {img && id !== 5 && (
           <img
             src={img}
-            alt={img}
+            alt={String(title)}
             className={cn(
               "absolute inset-0 w-full h-full object-cover object-center",
               imgClassName
@@ -87,14 +90,16 @@ export const BentoGridItem = ({
           />
         )}
 
+        {/* Spare image */}
         {spareImg && id !== 5 && (
           <img
             src={spareImg}
-            alt={spareImg}
+            alt="spare"
             className="absolute right-0 bottom-0 w-full opacity-40"
           />
         )}
 
+        {/* Content */}
         <div
           className={cn(
             titleClassName,
@@ -111,12 +116,14 @@ export const BentoGridItem = ({
             {title}
           </h2>
 
+          {/* Globe */}
           {id === 2 && (
             <div className="absolute inset-x-0 bottom-0 flex justify-center z-0">
               <GridGlobe />
             </div>
           )}
 
+          {/* Tech stack */}
           {id === 3 && (
             <div className="flex gap-4 mt-6">
               <div className="flex flex-col gap-3 lg:gap-6">
@@ -142,14 +149,15 @@ export const BentoGridItem = ({
             </div>
           )}
 
+          {/* Copy email */}
           {id === 6 && (
             <div className="mt-6 relative">
               {copied && (
                 <div className="absolute -bottom-5 right-0">
-                  <Player
+                  <Lottie
+                    animationData={animationData}
                     autoplay
                     loop={false}
-                    src={animationData}
                     style={{ height: 200, width: 400 }}
                   />
                 </div>
@@ -166,6 +174,7 @@ export const BentoGridItem = ({
           )}
         </div>
 
+        {/* Gradient animation */}
         {id === 6 && (
           <BackgroundGradientAnimation>
             <div className="absolute inset-0 z-0" />
