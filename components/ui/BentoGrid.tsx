@@ -1,14 +1,19 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import { IoCopyOutline } from "react-icons/io5";
-import { Player } from "lottie-react"; // ✅ FIXED
 
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
+
+const Player = dynamic(
+  () => import("lottie-react").then((mod) => mod.Player),
+  { ssr: false }
+);
 
 export const BentoGrid = ({
   className,
@@ -54,10 +59,8 @@ export const BentoGridItem = ({
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    if (typeof window !== "undefined") {
-      navigator.clipboard.writeText("souravpaul043@gmail.com");
-      setCopied(true);
-    }
+    navigator.clipboard.writeText("souravpaul043@gmail.com");
+    setCopied(true);
   };
 
   return (
