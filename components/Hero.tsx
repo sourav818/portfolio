@@ -32,7 +32,7 @@ const Hero = () => {
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
 
-          {/* PROFILE PHOTO – ADDED ONLY */}
+          {/* PROFILE PHOTO */}
           <img
             src="/sourav.jpg"
             alt="Sourav Paul"
@@ -48,19 +48,37 @@ const Hero = () => {
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
+          <p className="text-center md:tracking-wider mb-6 text-sm md:text-lg lg:text-2xl">
             Hi! I&apos;m <span className="font-semibold">Sourav Paul</span>, currently pursuing my
             Master of Computer Applications in Artificial Intelligence and Deep Learning, with
             strong skills in web development, Python programming, and data visualization.
           </p>
 
-          <a href="#about">
-            <MagicButton
-              title="Explore My Work"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
+          {/* BUTTONS */}
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a href="#about">
+              <MagicButton
+                title="Explore My Work"
+                icon={<FaLocationArrow />}
+                position="right"
+              />
+            </a>
+
+            {/* DOWNLOAD CV – ADDED */}
+            <a
+              href="/Sourav_Paul_CV.pdf"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MagicButton
+                title="Download CV"
+                icon={<FaLocationArrow />}
+                position="right"
+              />
+            </a>
+          </div>
+
         </div>
       </div>
     </div>

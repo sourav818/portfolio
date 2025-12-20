@@ -25,9 +25,26 @@ const Footer = () => {
           project collaborations in software development, AI, and data
           analytics.
         </p>
+
+        {/* CONTACT BUTTON */}
         <a href="mailto:souravpaul043@gmail.com">
           <MagicButton
             title="Get in touch with me"
+            icon={<FaLocationArrow />}
+            position="right"
+          />
+        </a>
+
+        {/* DOWNLOAD CV – ADDED */}
+        <a
+          href="/Sourav_Paul_CV.pdf"
+          download
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6"
+        >
+          <MagicButton
+            title="Download CV"
             icon={<FaLocationArrow />}
             position="right"
           />
