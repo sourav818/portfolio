@@ -53,8 +53,8 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["Python", "C", "C++", "JavaScript"];
-  const rightLists = ["MySQL", "IBM Tools", "AI / ML", "NLP"];
+  const leftLists = ["Python", "C", "C++", "HTML", "CSS"];
+  const rightLists = ["Javascript", "MySQL", "IBM Tools", "AI / ML", "NLP"];
 
   const [copied, setCopied] = useState(false);
 
@@ -78,24 +78,27 @@ export const BentoGridItem = ({
       }}
     >
       <div className="relative h-full">
-        {/* Background image */}
+        {/* ✅ FULL CARD IMAGE */}
         {img && id !== 5 && (
           <img
             src={img}
             alt={String(title)}
             className={cn(
-              "absolute inset-0 w-full h-full object-cover object-center",
+              "absolute inset-0 w-full h-full object-cover rounded-3xl",
               imgClassName
             )}
           />
         )}
+
+        {/* Dark overlay for readability */}
+        {img && <div className="absolute inset-0 bg-black/40 z-10 rounded-3xl" />}
 
         {/* Spare image */}
         {spareImg && id !== 5 && (
           <img
             src={spareImg}
             alt="spare"
-            className="absolute right-0 bottom-0 w-full opacity-40"
+            className="absolute right-0 bottom-0 w-full opacity-40 z-10"
           />
         )}
 
@@ -108,9 +111,12 @@ export const BentoGridItem = ({
             }`
           )}
         >
-          <p className="font-sans font-extralight text-sm lg:text-base leading-relaxed text-[#E2E4F3] max-w-md">
-            {description}
-          </p>
+          {/* ✅ HIDE DESCRIPTION ONLY FOR SKILLS (id === 3) */}
+          {description && id !== 3 && (
+            <p className="font-sans font-extralight text-sm lg:text-base leading-relaxed text-[#E2E4F3] max-w-md">
+              {description}
+            </p>
+          )}
 
           <h2 className="mt-2 font-sans text-lg lg:text-3xl font-bold max-w-lg text-white">
             {title}
@@ -123,14 +129,14 @@ export const BentoGridItem = ({
             </div>
           )}
 
-          {/* Tech stack */}
+          {/* Skill Set */}
           {id === 3 && (
             <div className="flex gap-4 mt-6">
               <div className="flex flex-col gap-3 lg:gap-6">
                 {leftLists.map((item, i) => (
                   <span
                     key={i}
-                    className="px-3 py-2 text-xs lg:text-base rounded-lg bg-[#10132E] text-center opacity-70"
+                    className="px-3 py-2 text-xs lg:text-base rounded-lg bg-[#10132E] text-center opacity-80"
                   >
                     {item}
                   </span>
@@ -140,7 +146,7 @@ export const BentoGridItem = ({
                 {rightLists.map((item, i) => (
                   <span
                     key={i}
-                    className="px-3 py-2 text-xs lg:text-base rounded-lg bg-[#10132E] text-center opacity-70"
+                    className="px-3 py-2 text-xs lg:text-base rounded-lg bg-[#10132E] text-center opacity-80"
                   >
                     {item}
                   </span>
