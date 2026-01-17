@@ -176,6 +176,13 @@ export const workExperience = [
     className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
+  {
+    id: 3,
+    title: "Artificial Intelligence Intern",
+    desc: "Codec Technologies Pvt. Ltd. (2026). Worked on Machine Learning and AI-based projects including Stock Price Prediction and Spam Email Classification. Built and deployed ML models using Python, Scikit-learn, TensorFlow, and Streamlit. Gained hands-on experience in data preprocessing, model training, evaluation, and deployment.",
+    className: "md:col-span-2",
+    thumbnail: "/exp1.svg",
+  },
 ];
 
 export const socialMedia = [
