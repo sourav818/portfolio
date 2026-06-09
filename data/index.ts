@@ -8,9 +8,9 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "MCA (AI & DL) student with strong technical and analytical skills",
+    title: "MCA Graduate (AI & Deep Learning) with strong technical and analytical skills",
     description:
-      "Pursuing Master of Computer Applications (IBM) in Artificial Intelligence & Deep Learning with a strong background in Statistics and hands-on experience in software development, machine learning, and data-driven applications.",
+      "Master of Computer Applications graduate specializing in Artificial Intelligence & Deep Learning, with a strong foundation in Statistics and hands-on experience in Python development, Machine Learning, Data Analytics, IoT, and AI-driven applications.",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
@@ -32,7 +32,7 @@ export const gridItems = [
     id: 3,
     title: "My technical skill set",
     description:
-      "Python, C, C++, HTML, CSS, JavaScript, SQL, Flask, MySQL, Data Visualization (Matplotlib), IBM Cognos, AI/ML fundamentals, NLP.",
+  "Python, Flask, Machine Learning, Artificial Intelligence, Deep Learning, OpenCV, Firebase, SQL, MySQL, HTML, CSS, JavaScript, Git, GitHub, Data Visualization, IBM Cognos.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -64,9 +64,9 @@ spareImg: "/b4.svg",
   },
   {
     id: 6,
-title: "Open to internships and entry-level opportunities",
+title: "Open to Full-Time Opportunities",
 description:
-  "Seeking opportunities in software development, data analytics, AI/ML, and related domains to apply skills and grow professionally.",
+  "Seeking opportunities in software development, AI/ML, data analytics, and related domains to apply technical skills and contribute to impactful projects.",
 className: "lg:col-span-2 md:col-span-3 md:row-span-2",
 imgClassName: "",
 titleClassName: "justify-center md:max-w-full max-w-60 text-center",
@@ -78,15 +78,23 @@ spareImg: "",
 
 export const projects = [
   {
-    id: 1,
-    title: "News Article Classification System",
-    des: "Python-based machine learning system using NLP (TF-IDF) and Logistic Regression achieving 99.33% accuracy. Built with Streamlit, Matplotlib, and real-time multi-category prediction.",
-    img: "/news-classification-model.png",
-    iconLists: ["/python.svg", "/ml.svg"],
-    link: "https://github.com/sourav818/news-category-prediction",
-  },
+  id: 1,
+  title: "RelaXo Monitor – AI-Based Stress Prediction System",
+  des: "AI-powered real-time stress prediction system using IoT sensors, facial emotion recognition, voice analysis, machine learning, Firebase, and a Flask dashboard for monitoring and wellness recommendations.",
+  img: "/relaxo_monitor.png",
+  iconLists: ["/python.svg", "/ai.svg", "/flask.svg"],
+  link: "https://github.com/sourav818/RelaXo-Monitor-AI-Stress-Prediction",
+},
+{
+  id: 2,
+  title: "News Article Classification System",
+  des: "Python-based machine learning system using NLP (TF-IDF) and Logistic Regression achieving 99.33% accuracy. Built with Streamlit, Matplotlib, and real-time multi-category prediction.",
+  img: "/news-classification-model.png",
+  iconLists: ["/python.svg", "/ml.svg"],
+  link: "https://github.com/sourav818/news-category-prediction",
+},
   {
-    id: 2,
+    id: 3,
     title: "Smart AI Chatbot",
     des: "Node.js based chatbot integrated with OpenAI, Socket.IO, IBM Cloud Text-to-Speech and Speech-to-Text services, with a responsive HTML, CSS, and JavaScript frontend.",
     img: "/ai-chatbot.png",
@@ -94,7 +102,7 @@ export const projects = [
     link: "https://github.com/sourav818/Smart-Voice-Chatbot",
   },
   {
-    id: 3,
+    id: 4,
     title: "Student Attendance Management System",
     des: "Flask-based system with face recognition, Twilio SMS integration, MySQL database, Matplotlib visualizations, and a web-based frontend.",
     img: "/attendance-system.png",
@@ -102,7 +110,7 @@ export const projects = [
     link: "https://github.com/sourav818/Attendance_System",
   },
   {
-  id: 4,
+  id: 5,
   title: "PDF Comparison Tool",
   des: "Python tool to analyze and compare PDF files by examining text, metadata, and binary differences with automated reporting.",
   img: "/pdf-comparison.png",
@@ -110,7 +118,7 @@ export const projects = [
   link: "https://github.com/sourav818/Pdf-Comparison-Tool",
 },
 {
-    id: 5,
+    id: 6,
     title: "ToDo Management System",
     des: "Flask-based web application with MySQL database, Twilio SMS integration, task management features, and data visualization using Matplotlib.",
     img: "/todo-management.png",
