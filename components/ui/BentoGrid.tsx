@@ -181,7 +181,7 @@ export const BentoGridItem = ({
         </div>
 
       {/* Gradient animation */}
-{(id === 4 || id === 5 || id === 6) && (
+{(id === 2 || id === 3 || id === 4 || id === 5 || id === 6) && (
   <BackgroundGradientAnimation>
     <div className="absolute inset-0 z-0" />
   </BackgroundGradientAnimation>
