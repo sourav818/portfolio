@@ -70,8 +70,8 @@ const Hero = () => {
 
           {/* Subtitle */}
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            MCA (AI & DL) • Aspiring Software Developer & Data Analyst
-          </p>
+  MCA Graduate (AI & DL) • Software Developer & Data Analyst
+</p>
 
           {/* Heading */}
           <TextGenerateEffect
@@ -81,10 +81,10 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-center md:tracking-wider mb-6 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m <span className="font-semibold">Sourav Paul</span>, currently pursuing my
-            Master of Computer Applications in Artificial Intelligence and Deep Learning, with
-            strong skills in web development, Python programming, and data visualization.
-          </p>
+  Hi! I&apos;m <span className="font-semibold">Sourav Paul</span>, an MCA Graduate specializing in
+  Artificial Intelligence and Deep Learning, with strong skills in web development,
+  Python programming, machine learning, data analytics, and AI-driven applications.
+</p>
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
