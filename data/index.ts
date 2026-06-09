@@ -41,27 +41,26 @@ export const gridItems = [
   },
   {
    id: 4,
-title: "Tech enthusiast with a passion for development",
-description:
-  "Interested in building interactive web applications, AI-driven systems, dashboards, and data-centric solutions for real-world problems.",
-className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-imgClassName: "",
-titleClassName: "justify-start",
-img: "/grid.svg",
-spareImg: "/b4.svg",
-
-  },
-  {
-    id: 5,
-    title: "Hands-on academic and project experience",
-    description:
-      "Developed multiple real-world projects involving machine learning, NLP, face recognition, automation, databases, APIs, and full-stack development.",
-    className: "md:col-span-3 md:row-span-2",
-    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
-    titleClassName: "justify-center md:justify-start lg:justify-center",
-    img: "/b5.svg",
-    spareImg: "/grid.svg",
-  },
+   title: "Tech enthusiast with a passion for development",
+   description:
+     "Interested in building interactive web applications, AI-driven systems, dashboards, and data-centric solutions for real-world problems.",
+   className: "lg:col-span-2 md:col-span-3 md:row-span-2",
+   imgClassName: "",
+   titleClassName: "justify-start",
+   img: "",
+   spareImg: "",
+},
+ {
+  id: 5,
+  title: "Hands-on academic and project experience",
+  description:
+    "Developed multiple real-world projects involving machine learning, NLP, face recognition, automation, databases, APIs, and full-stack development.",
+  className: "md:col-span-3 md:row-span-2",
+  imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
+  titleClassName: "justify-center md:justify-start lg:justify-center",
+  img: "",
+  spareImg: "",
+},
   {
     id: 6,
 title: "Open to Full-Time Opportunities",
