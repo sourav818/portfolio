@@ -125,13 +125,30 @@ export const projects = [
     link: "https://github.com/sourav818/ToDoZen-Todo-App",
   },
 ];
-
 export const testimonials = [
   {
     quote:
-      "Sourav has demonstrated strong analytical skills, technical proficiency, and a keen interest in applying AI, machine learning, and software development concepts to real-world problems.",
-    name: "Faculty Mentor",
-    title: "Assam down town University",
+      "With a strong foundation in Artificial Intelligence, data analytics, and software engineering, Sourav has consistently demonstrated the ability to learn, adapt, and innovate. He approaches challenges with determination and a solution-oriented mindset.",
+    name: "Dr. Nabanita Choudhury",
+    title: "Assistant Professor, Assam down town University",
+  },
+  {
+    quote:
+      "Sourav consistently demonstrated a strong ability to combine analytical thinking with practical problem-solving. His dedication to learning and applying AI, machine learning, and software development concepts makes him a promising technology professional.",
+    name: "Dr. Gunikhan Sonowal",
+    title: "Faculty, Department of MCA, Assam down town University",
+  },
+  {
+    quote:
+      "Throughout his academic journey, Sourav has shown exceptional curiosity, technical competence, and a commitment to excellence. His ability to transform innovative ideas into functional solutions is highly commendable.",
+    name: "Mr. Paragjyoti Das",
+    title: "Professor, Assam down town University",
+  },
+  {
+    quote:
+      "Sourav stands out for his passion for technology, continuous learning mindset, and ability to deliver impactful solutions. His dedication to AI, data analytics, and software development positions him well for future success.",
+    name: "Mr. Wanraplang Nongbri",
+    title: "Faculty Mentor, Assam down town University",
   },
 ];
 
