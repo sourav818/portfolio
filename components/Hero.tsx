@@ -97,7 +97,7 @@ const Hero = () => {
             </a>
 
             <a
-              href="/resume.pdf"
+              href="/Sourav_Paul_CV.pdf"
               download
               target="_blank"
               rel="noopener noreferrer"
